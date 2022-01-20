@@ -15,38 +15,40 @@ function startApp() {
 }
 
 // module: input operator | Test:
-// output(getOp());
+output(getOp());
 function getOp() {
     let op = prompt("Bitte Operator eingeben")
-    return op;  
+    if (isOpValid(op)) {
+        return op;  
+    } else {
+        return "Nicht korrekt, nochmal bitte ...";
+    }
 }
 
 // module: check operator | Test:
 // agreement : "+","-","*",":"
-output(isOpValid("+"));
-output(isOpValid("-"));
-output(isOpValid("*"));
-output(isOpValid(":"));
-output(isOpValid("#?#"));
-output(isOpValid(""));
+// output(isOpValid("+"));
+// output(isOpValid("-"));
+// output(isOpValid("*"));
+// output(isOpValid(":"));
+// output(isOpValid("#?#"));
+// output(isOpValid(""));
 function isOpValid(op) {
 
     //1st variant
-    // switch (op) {
-    //     case "+":
-    //     case "-":
-    //     case "*":
-    //     case ":":
-    //         return true;    
-    //     default:
-    //         return false;
-    // }
+    switch (op) {
+        case "+":
+        case "-":
+        case "*":
+        case ":":
+            return true;    
+        default:
+            return false;
+    }
 
     // 2nd variant
     // return op == "+" || op == "-" || op == "*" || op == ":";
 }
-
-
 
 // module: calculator | tests:
 // agreement : "+","-","*",":"
