@@ -9,20 +9,33 @@
 */
 
 // application / App
-// startApp();
+startApp();
 function startApp() {
     output(calculator(2,2,getOp()));
+    output(calculator(getNumber(),getNumber(),getOp()));
 }
 
+// module: data input | test:
+
+function getNumber() {
+    return 2;
+}
+
+
+
 // module: input operator | Test:
-output(getOp());
+// output(getOp());
 function getOp() {
-    let op = prompt("Bitte Operator eingeben")
-    if (isOpValid(op)) {
-        return op;  
-    } else {
-        return "Nicht korrekt, nochmal bitte ...";
+
+    const displayStr = "Bitte korrekten Operator (+ | - | * | :) eingeben";
+    let op = prompt(displayStr);
+
+    // if op is NOT valid AND user DIDN'T click at Abbrechen
+     while (!isOpValid(op) && (op !== null)) {
+        op = prompt(displayStr);
     }
+
+    return op;
 }
 
 // module: check operator | Test:
