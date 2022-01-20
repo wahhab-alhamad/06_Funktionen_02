@@ -9,14 +9,27 @@
 */
 
 
+// module: division a / b |  test:
+output(divide(10,2));
+output(divide(5,5));
+output(divide(0,2));
+output(divide(2,0));
+function divide(a,b) {
+
+    if (b==0) {  // Ausnahme
+        return "Division by 0 not possible!";
+    } 
+        
+    return a/b; // Regel
+}
+
 // module: multiplication a * b |  test:
-output(multiply(3,3));
-output(multiply(-3,2));
-output(multiply(0,100));
+// output(multiply(3,3));
+// output(multiply(-3,2));
+// output(multiply(0,100));
 function multiply(a,b) {
     return a*b;
 }
-
 
 // module: subtraction a - b |  test:
 // output(subtract(2,10));
