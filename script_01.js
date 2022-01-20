@@ -15,16 +15,35 @@ function startApp() {
 }
 
 // module: input operator | Test:
-output(getOp());
+// output(getOp());
 function getOp() {
     let op = prompt("Bitte Operator eingeben")
     return op;  
 }
 
 // module: check operator | Test:
+// agreement : "+","-","*",":"
+output(isOpValid("+"));
+output(isOpValid("-"));
+output(isOpValid("*"));
+output(isOpValid(":"));
+output(isOpValid("#?#"));
+output(isOpValid(""));
+function isOpValid(op) {
 
-function isOpValid(params) {
-    
+    //1st variant
+    // switch (op) {
+    //     case "+":
+    //     case "-":
+    //     case "*":
+    //     case ":":
+    //         return true;    
+    //     default:
+    //         return false;
+    // }
+
+    // 2nd variant
+    // return op == "+" || op == "-" || op == "*" || op == ":";
 }
 
 
