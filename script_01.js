@@ -11,13 +11,18 @@
 
 
 
-
-
+// module: addition a + b |  test:
+output(add(2,3));
+output(add(2,-3));
+output(add(2.1,1.1));
+function add(a,b) {
+   return a + b; 
+}
 
 
 // module: console output | test:
-output("Hello");
-output(20);
+// output("Hello");
+// output(20);
 function output(outputData) {
    console.log(outputData);
 }
