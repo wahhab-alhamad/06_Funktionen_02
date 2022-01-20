@@ -11,15 +11,26 @@
 // application / App
 startApp();
 function startApp() {
-    output(calculator(2,2,getOp()));
-    output(calculator(getNumber(),getNumber(),getOp()));
+    output(calculator(getNumber("1"),getNumber("2"),getOp()));
 }
 
 // module: data input | test:
+// output(getNumber(("1"));
+function getNumber(numTxt){
 
-function getNumber() {
-    return 2;
+    const displayStr = "Eingabe Zahl " + numTxt + ":";
+    let inputStr = prompt(displayStr);
+    let num = parseInt(inputStr);
+
+    // if num is NOT valid AND user DIDN'T click at Abbrechen
+    while (isNaN(num) && (inputStr !== null)) {
+        inputStr =  prompt(displayStr);
+        num = parseInt(ziffer); 
+    }
+
+    return num;
 }
+
 
 
 
@@ -72,6 +83,7 @@ function isOpValid(op) {
 // output(calculator(2,0,":"));
 // output(calculator(2,0,"#!"));
 function calculator(a,b,op) {
+    // a,b --> Operanden / Operatoren: +,- ..
     switch (op) {
         case "+": // addition 
             return add(a,b);
