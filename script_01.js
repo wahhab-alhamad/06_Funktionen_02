@@ -8,14 +8,35 @@
 4. Ausgabe in Konsole : check!
 */
 
+// application / App
+// startApp();
+function startApp() {
+    output(calculator(2,2,getOp()));
+}
+
+// module: input operator | Test:
+output(getOp());
+function getOp() {
+    let op = prompt("Bitte Operator eingeben")
+    return op;  
+}
+
+// module: check operator | Test:
+
+function isOpValid(params) {
+    
+}
+
+
+
 // module: calculator | tests:
 // agreement : "+","-","*",":"
-output(calculator(2,2,"+"));
-output(calculator(2,2,"-"));
-output(calculator(2,2,"*"));
-output(calculator(2,2,":"));
-output(calculator(2,0,":"));
-output(calculator(2,0,"#!"));
+// output(calculator(2,2,"+"));
+// output(calculator(2,2,"-"));
+// output(calculator(2,2,"*"));
+// output(calculator(2,2,":"));
+// output(calculator(2,0,":"));
+// output(calculator(2,0,"#!"));
 function calculator(a,b,op) {
     switch (op) {
         case "+": // addition 
