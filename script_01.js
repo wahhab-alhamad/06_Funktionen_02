@@ -8,10 +8,20 @@
 4. Ausgabe in Konsole
 */
 
+
+// module: multiplication a * b |  test:
+output(multiply(3,3));
+output(multiply(-3,2));
+output(multiply(0,100));
+function multiply(a,b) {
+    return a*b;
+}
+
+
 // module: subtraction a - b |  test:
-output(subtract(2,10));
-output(subtract(2,1));
-output(subtract(2.1,1.1));
+// output(subtract(2,10));
+// output(subtract(2,1));
+// output(subtract(2.1,1.1));
 function subtract(a,b) {
     return a-b;
 }
@@ -23,7 +33,6 @@ function subtract(a,b) {
 function add(a,b) {
    return a+b; 
 }
-
 
 // module: console output | test:
 // output("Hello");
