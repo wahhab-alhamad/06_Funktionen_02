@@ -8,15 +8,20 @@
 4. Ausgabe in Konsole
 */
 
-
-
+// module: subtraction a - b |  test:
+output(subtract(2,10));
+output(subtract(2,1));
+output(subtract(2.1,1.1));
+function subtract(a,b) {
+    return a-b;
+}
 
 // module: addition a + b |  test:
-output(add(2,3));
-output(add(2,-3));
-output(add(2.1,1.1));
+// output(add(2,3));
+// output(add(2,-3));
+// output(add(2.1,1.1));
 function add(a,b) {
-   return a + b; 
+   return a+b; 
 }
 
 
