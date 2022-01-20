@@ -3,17 +3,39 @@
 /*
 0. a+b / a-b/ a*b / a/b  // ergebnis c 
 1. Dateneingabe + -überprüfung
-2. Auswahl Rechenart
+2. Auswahl Rechenart : check!
 3. Fkt. Grundrechenarten : check!
-4. Ausgabe in Konsole
+4. Ausgabe in Konsole : check!
 */
 
+// module: calculator | tests:
+// agreement : "+","-","*",":"
+output(calculator(2,2,"+"));
+output(calculator(2,2,"-"));
+output(calculator(2,2,"*"));
+output(calculator(2,2,":"));
+output(calculator(2,0,":"));
+output(calculator(2,0,"#!"));
+function calculator(a,b,op) {
+    switch (op) {
+        case "+": // addition 
+            return add(a,b);
+        case "-": // subtraction
+            return subtract(a,b);
+        case "*": // multiplication
+            return multiply(a,b);
+        case ":": // division
+            return divide(a,b);
+        default:
+            return "Something went wrong!"
+    }
+}
 
 // module: division a / b |  test:
-output(divide(10,2));
-output(divide(5,5));
-output(divide(0,2));
-output(divide(2,0));
+// output(divide(10,2));
+// output(divide(5,5));
+// output(divide(0,2));
+// output(divide(2,0));
 function divide(a,b) {
 
     if (b==0) {  // Ausnahme
