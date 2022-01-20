@@ -1,10 +1,10 @@
 
 /*** Rechner */
 /*
-0. a+b / a-b/ a*b / a/b  // ergebnis c
+0. a+b / a-b/ a*b / a/b  // ergebnis c 
 1. Dateneingabe + -überprüfung
 2. Auswahl Rechenart
-3. Fkt. Grundrechenarten
+3. Fkt. Grundrechenarten : check!
 4. Ausgabe in Konsole
 */
 
@@ -51,7 +51,11 @@ function add(a,b) {
 // output("Hello");
 // output(20);
 function output(outputData) {
-   console.log(outputData);
+    if (typeof outputData == "number") {
+        console.log("The result is: " + outputData);
+    } else {
+        console.log("ERROR: " + outputData);
+    }
 }
 
 
