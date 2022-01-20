@@ -25,13 +25,11 @@ function getNumber(numTxt){
     // if num is NOT valid AND user DIDN'T click at Abbrechen
     while (isNaN(num) && (inputStr !== null)) {
         inputStr =  prompt(displayStr);
-        num = parseInt(ziffer); 
+        num = parseInt(inputStr); 
     }
 
     return num;
 }
-
-
 
 
 // module: input operator | Test:
